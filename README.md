@@ -7,7 +7,7 @@ Various configure options has been removed to keep the executable short. Also, P
 
 By default, squid doesn't allow to optimize HTTP headers, therefore, Squid will never be really transparent. We can achieve this behavior just changing the configure options on compile time. 
 
-The container will create a self-signed certificate and will listen on 3129 port. It'll then encript/decript ssl traffic.
+The container will create a self-signed certificate and will listen on 3129 port. It'll then encrypt/decrypt ssl traffic.
 
 Please, be aware that changing HTTP_headers will break normal web browsing at some point if not choosing headers carefully. Also some web sites could ban your ip if find bogus HTTP_headers.  
 
