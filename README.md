@@ -13,7 +13,7 @@ Please, be aware that changing HTTP_headers could break normal web browsing some
 
 ## Some considerations
 
-Many of Squid proxy features has been disabled to keep the image small. Also consider using other tools rather than Squid for proxing since it's mostly outdated for most current use cases, also consider it's just an example how to run Squid under Docker. 
+Many of Squid proxy features has been disabled to keep the image small. Also consider using other tools rather than Squid for proxing since it's not suited for most current use cases, also consider it's just an example how to run Squid under Docker. 
 
 ## How to run this image
 
@@ -27,5 +27,6 @@ Then:
 ```
 docker run -d --name squid -p 3129:3129 squid 
 ```
+
 
 
