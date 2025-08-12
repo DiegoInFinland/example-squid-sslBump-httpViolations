@@ -9,7 +9,7 @@ By default, squid doesn't allow to optimize HTTP headers, therefore, Squid will 
 
 The container will create a self-signed certificate and will listen on 3129 port. It'll then encrypt/decrypt ssl traffic.
 
-Please, be aware that changing HTTP_headers could break normal web browsing sometimes.
+Please, be aware that changing HTTP_headers could break normal web browsing behavior.
 
 ## Some considerations
 
@@ -27,6 +27,7 @@ Then:
 ```
 docker run -d --name squid -p 3129:3129 squid 
 ```
+
 
 
 
