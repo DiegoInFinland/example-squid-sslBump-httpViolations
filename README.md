@@ -9,11 +9,11 @@ By default, squid doesn't allow to optimize HTTP headers, therefore, Squid will 
 
 The container will create a self-signed certificate and will listen on 3129 port. It'll then encrypt/decrypt ssl traffic.
 
-Please, be aware that changing HTTP_headers will break normal web browsing at some point if not choosing headers carefully. Also some web sites could ban your ip if find bogus HTTP_headers.  
+Please, be aware that changing HTTP_headers could break normal web browsing sometimes.
 
 ## Some considerations
 
-This is a sample image. It's not meant to be in any production enviroment. Also Many of its features has been disabled to keep the code small.
+Many of Squid proxy features has been disabled to keep the image small. Also consider using other tools rather than Squid for proxing since it's mostly outdated for most current use cases, also consider it's just an example how to run it. 
 
 ## How to run this image
 
@@ -22,8 +22,9 @@ First build the image:
 docker build -t squid .
 ```
 
-Then run it:
+Then:
 
 ```
 docker run -d --name squid -p 3129:3129 
 ```
+
