@@ -13,10 +13,7 @@ PID=/var/run/squid.pid
 
 sanitizeEverything() {
 	echo "Starting Squid..."
-
-	# we don't need this. 
-	rm -rf /opt /home /mnt /root /media /srv 
-
+ 
 	if [ -f $PID ]; then
     	rm -rf $PID
 	fi
@@ -69,7 +66,7 @@ loadSsl() {
 	echo "#--------  We accept everything else ---------- #" >> $SQUID_ADD
 	echo "request_header_access All allow all" >> $SQUID_ADD
 
-	# We can get creative with the settings...
+	# Example how to customize headers: 
 	# request_header_replace User-Agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36' 
 	# request_header_access From deny all
 	# request_header_access Cookie deny all
